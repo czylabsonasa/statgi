@@ -1,0 +1,338 @@
+\documentclass[12pt]{amsbook}
+
+
+\setcounter{tocdepth}{3}
+
+
+\makeatletter
+\def\l@subsubsection{\@tocline{2}{5pt}{6pc}{8pc}{}}
+\makeatother
+
+\makeatletter
+\def\l@subsection{\@tocline{2}{2pt}{2.5pc}{5pc}{}}
+\makeatother
+
+
+\usepackage[margin=2.5cm,nohead]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[hungarian]{babel}
+\usepackage[%hypertex,
+                 unicode=true,
+                 plainpages = false,
+                 pdfpagelabels,
+                 bookmarks=true,
+                 bookmarksnumbered=true,
+                 bookmarksopen=true,
+                 breaklinks=true,
+                 backref=false,
+                 colorlinks=true,
+                 linkcolor = blue,
+                 urlcolor  = blue,
+                 citecolor = red,
+                 anchorcolor = green,
+                 hyperindex = true,
+                 hyperfigures
+]{hyperref}
+\hypersetup{
+ pdftitle={Stat2},
+ pdfauthor={Czylabson Asa},
+ pdfsubject={Hold Föld Nap}
+}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{type1cm}
+
+\usepackage{setspace}
+
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\begin{document}
+\pagestyle{plain}
+% sortávolság
+\begin{spacing}{1.5}
+
+
+\begin{section}{Áttekint}
+   \begin{itemize}
+   \item \nameref{1m}
+      \begin{itemize}
+         \item \nameref{1mzk}
+         \item \nameref{1mzp}
+         \item \nameref{1mtk}
+         \item \nameref{1mtp}
+         \item \nameref{1mszk}
+         \item \nameref{1mszp}
+         \item \nameref{1mak}
+         \item \nameref{1map}
+      \end{itemize}
+   \item \nameref{2m}
+      \begin{itemize}
+         \item \nameref{2mzk}
+         \item \nameref{2mzp}
+         \item \nameref{2mtk}
+         \item \nameref{2mtp}
+      \end{itemize}
+   \end{itemize}
+\end{section}
+
+\begin{section}{Egymintás}
+\label{1m}
+\begin{subsection}{egymintás Z-próba (u), képlet}
+   \label{1mzk}
+   \begin{gather*}
+   H_0: \mu = \mu_0\\
+   Z=\frac{\overline{X}-\mu_0}{\frac{\sigma}{\sqrt{n}}} \ \
+   \overset{H_0}{\sim} \ \ {\mathcal N}(0,1)
+   \end{gather*}
+\end{subsection}
+
+\begin{subsection}{egymintás Z-próba (u), példa}
+   \label{1mzp}
+   1.1 (üdítőitalos)
+   várható értékre irányuló kérdés, ismert szórás, kétoldali jellegű, normális sokaság.
+   \begin{gather*}
+   X=499, 525, 498, 503, 501, 497, 493, 496, 500, 495\\
+   \sigma=3, \ n=10, \ \alpha=0.05 \\
+   \overline{X}=\frac{499+525+\ldots +500+495}{10}=500.7\\
+   H_{0}: \mu = 500\\
+   H_{1}: \mu \neq 500\\
+   z_{1-\frac{\alpha}{2}}=z_{0.975}=1.96\\
+   Z=\frac{500.7-500}{\frac{3}{\sqrt{10}}}=\frac{0.7\sqrt{10}}{3}=0.73786\\
+   |Z|<z_{0.975}=1.96\ \ \
+   \end{gather*}
+   ezért $H_{0}$-t nincs okom elvetni. $95\%$-os szinten a gyártó állítása elfogadható.
+\end{subsection}%1mzp
+
+
+\begin{subsection}{egymintás t-próba, képlet}
+\label{1mtk}
+   \begin{gather*}
+   H_0: \mu = \mu_0\\
+   t=\frac{\overline{X}-\mu_0}{\frac{s}{\sqrt{n}}} \ \ \overset{H_0}{\sim} \ \ t_{df=n-1}\\
+   s^2=\frac{\sum_{i=1}^n ( X_i - \overline{ X })^2}{n-1}
+   \end{gather*}
+\end{subsection}%egymintás t-próba, képlet
+
+
+\begin{subsection}{egymintás t-próba, példa}
+\label{1mtp}
+   1.4 (munkások szintidő) várható értékre irányuló kérdés, ismeretlen szórás,
+   egyoldali jellegű, normális sokaság.
+   \begin{gather*}
+   n=12,\ \sigma \text{ nem ismert, } \alpha=0.01 \\
+   X=9.4, 8.8, 9.3, 9.1, 9.4, 8.9, 9.3, 9.2, 9.6, 9.3, 9.3, 9.1\\
+   \overline{X}=\frac{9.4+8.8+\ldots +9.3+9.1}{12}=9.225\\
+   s^{2}=\frac{(9.4-9.225)^2+(8.8-9.225)^2+\ldots+(9.1-9.225)^2}{12-1}=\\
+   =0.049318\ \implies s=0.22208\\
+   H_{0}:\mu \le 9\\
+   H_{1}:\mu > 9\\
+   t=\frac{(9.225-9)\sqrt{12}}{0.22208}=3.5097 > c_f=t_{df=11,\ 0.99}=2.718\\
+   \end{gather*}
+   tehát adott szinten a minta ellentmond $H_0$-nak $\implies$ a munkások állítása elfogadható.
+\end{subsection}%egymintás t-próba, példa
+
+
+
+
+\begin{subsection}{ szórásra irányuló $\chi^2$-próba, képlet }
+\label{1mszk}
+   \begin{gather*}
+   H_0: \sigma^{2} = \sigma^{2}_{0}\\
+   \chi^2=\frac{(n-1)s^2}{\sigma_0^2} \ \ \overset{H_0}{\sim} \ \ \chi^2_{df=n-1}
+   \end{gather*}
+\end{subsection}% szórásra irányuló $\chi^2$-próba, képlet
+
+
+\begin{subsection}{ szórásra irányuló $\chi^2$-próba, példa }
+\label{1mszp}
+   2.1 (űrlapok)
+   szórásra irányul, kétoldali, normális sokaság.
+   \begin{gather*}
+   X=30, 20, 46, 33, 24, 25, 31, 32, 38, 31\\
+   n=10,\ \alpha=0.05\\
+   H_{0}:\sigma^2=36\\
+   H_{1}:\sigma^2\neq36\\
+   \overline{X}=\frac{30+\ldots+31}{10}=31\\
+   s^2=\frac{(30-31)^2+\ldots+(31-31)^2}{9}=54\\
+   \chi^2=\frac{9\cdot54}{36}=13.5\\
+   c_a=\chi^2_{df=9,\ 0.025}=2.7,\ c_f=\chi^2_{df=9,\ 0.975}=19.02\\
+   c_a=2.7 < \chi^2=13.5 < c_f=19.02\\
+   \end{gather*}
+   vagyis adott szinten a minta nem mond ellen a $H_0$-nak, a szórás lehet 6 darab.
+\end{subsection}% szórásra irányuló $\chi^2$-próba, példa
+
+
+
+
+\begin{subsection}{ egymintás aránypróba, képlet }
+\label{1mak}
+   \begin{gather*}
+   H_0: p = p_0\\
+   Z=\frac{\frac{k}{n}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} \ \ \overset{H_0}{\sim} \ \ {\mathcal N}(0,1)\\
+   \text{vagy más jelöléssel:}\\
+   Z=\frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} \ \ \overset{H_0}{\sim} \ \ {\mathcal N}(0,1)
+   \end{gather*}
+\end{subsection}% egymintás aránypróba, képlet
+
+
+\begin{subsection}{ egymintás aránypróba, példa }
+\label{1map}
+   3.2 (barackos)
+   arányra vonatkozó kérdés, baloldali jellegű
+   \begin{gather*}
+   n=50,\ \alpha=0.05,\ p_{0}=0.15,\ k=3,\ \hat{p}=\frac{k}{n}=\frac{3}{50}\\
+   H_{0}: p\ge 0.15\\
+   H_{1}: p < 0.15\\
+   Z=\frac{\frac{3}{50}-0.15}{\sqrt{\frac{0.15\cdot 0.85}{50}}} = -1.7823\\
+   z_{0.95}=1.65 \implies c_a = -1.65\\
+   Z=-1.7823 < c_a
+   \end{gather*}
+   ez azt jelenti, hogy adott szinten a minta ellentmond $H_0$-nak,
+   vagyis megérte lecserélni a beszállítót.
+\end{subsection}% egymintás aránypróba, példa
+
+\end{section}%1m
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{section}{Kétmintás}
+\label{2m}
+\begin{subsection}{kétmintás Z, képlet }
+\label{2mzk}
+   \begin{gather*}
+   H_0: \mu_X - \mu_Y = \delta_0\\
+   Z=\frac{\overline{X}-\overline{Y} - \delta_0}
+   {\sqrt{\frac{\sigma_X^2}{n_X}+ \frac{\sigma_Y^2}{n_Y} } } \ \
+   \overset{H_0}{\sim} \ \ {\mathcal N}(0,1)
+   \end{gather*}
+\end{subsection}%{kétmintás Z, képlet }
+
+
+\begin{subsection}{kétmintás Z, példa }
+\label{2mzp}
+   4.1 (kávés) $\sigma_x=\sigma_y=1$-et feltesszük. normális és
+   független sokaságok, ismertek a szórások.
+   $X:$ Mokka, $Y$: Koffe
+   \begin{gather*}
+   X=8.2, 5.0, 6.8, 6.7, 5.8, 7.3, 6.4, 7.8\\
+   Y=5.1, 4.3, 3.4, 3.7, 6.1, 4.7   \\
+   n_x=8,\ n_Y=6\  \alpha=0.05,\ \sigma_x=\sigma_y=1 \\
+   H_{0}: \mu_X-\mu_Y \le 0 \\
+   H_{1}: \mu_X-\mu_Y > 0 \\
+   \overline{X}=6.75,\ \overline{Y}=4.55\\
+   Z=\frac{6.75-4.55}{\sqrt{\frac{1}{8}+\frac{1}{6}}} = 4.0736\\
+   \text{táblázatból: } c_f = z_{0.95}=1.65\\
+   4.0736=Z > c_f=1.65
+   \end{gather*}
+   tehát adott szinten a minta ellentmond $H_0$-nak - elvetjük,
+   vagyis elfogadható, hogy Mokka lassabban oldódik.
+\end{subsection}%{kétmintás Z, példa }
+
+
+\begin{subsection}{kétmintás (független) t-próba, képlet}
+\label{2mtk}
+   \begin{gather*}
+   H_0: \mu_X - \mu_Y = \delta_{0}\\
+   t=\frac{\overline{X}-\overline{Y} - \delta_{0}}{s_p\sqrt{\frac{1}{n_X}+ \frac{1}{n_Y} } } \ \
+   \overset{H_0}{\sim} \ \ t_{df=n_X+n_Y-2}\\
+   s_p=\sqrt{ \frac{(n_X-1)s_x^2+(n_Y-1)s_y^2}{n_X+n_Y-2}}
+   \end{gather*}
+\end{subsection}%{kétmintás (független) t-próba, képlet}
+
+
+
+
+\begin{subsection}{kétmintás (független) t-próba, példa}
+\label{2mtp}
+   4.1 (kávés) normális és
+   független sokaságok, nem ismertek a szórások, de feltesszük hogy egyenlőek.
+   $X:$ Mokka, $Y$: Koffe
+   \begin{gather*}
+   X=8.2, 5.0, 6.8, 6.7, 5.8, 7.3, 6.4, 7.8\\
+   Y=5.1, 4.3, 3.4, 3.7, 6.1, 4.7   \\
+   n_X=8,\ n_Y=6\  \alpha=0.05 \\
+   H_{0}: \mu_X-\mu_Y \le 0 \\
+   H_{1}: \mu_X-\mu_Y > 0 \\
+   \overline{X}=6.75,\ \overline{Y}=4.55\\
+   s^2_X=1.0857,\ s^2_Y=0.967\\
+   s_p=\sqrt{\frac{7\cdot1.0857+5\cdot0.967}{12}}=1.0180\\
+   t=\frac{6.75-4.55}{1.0180\cdot\sqrt{\frac{1}{8}+\frac{1}{6}}} = 4.0017\\
+   c_f=t_{df=12,0.95}=1.782\\
+   t \ge c_f
+   \end{gather*}
+   tehát adott szinten a minta nem támasztja alá $H_0$-at - elvetjük, vagyis
+   elfogadható az az állítás hogy a Mokka lassabban oldódik.
+\end{subsection}%{kétmintás (független) t-próba, példa}
+
+
+
+\end{section}%2m
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+%\frame
+%{
+   %\frametitle{ t }
+   %\PC{$H_0: \mu_X - \mu_Y = \delta$ }
+   %\PC{$t=\frac{\overline{d} - \delta}{\frac{s_d}{\sqrt{n}}} \ \ \sim \ \ t(n-1)$ }
+   %\PC{$d=X-Y$}
+%}
+
+
+
+%\frame
+%{
+   %\frametitle{ $\chi^2$ }
+   %\PC{$H_0: \sigma_X = \sigma_Y$}
+   %\PC{$F=\frac{s_X^2}{s_Y^2} \ \ \sim \ \ F(n_X-1,n_Y-1)$}
+   %\PC{nagyobbat a számlálóba}
+%}
+
+
+
+
+
+
+%\frame
+%{
+   %\frametitle{ $p$ }
+   %\PC{$H_0: p_X - p_Y = \delta$}
+   %\PC{$Z=\frac{\hat{{p_X}}-\hat{{p_Y}}-\delta}{\sqrt{\frac{\hat{{p_X}}(1-\hat{{p_X}})}{n_X} + \frac{\hat{p_Y}(1-\hat{p_Y})}{n_Y} }} \ \ \sim \ \ N(0,1)$}
+   %\PC{$\hat{p_X}=\frac{k_X}{n_X},\hat{p_Y}=\frac{k_Y}{n_Y}$}
+%}
+
+
+%\end{section} %kétmintásak
+
+
+
+
+%\frame
+%{
+   %\frametitle{ Viszlát }
+%}
+
+\end{spacing}
+
+
+
+\end{document}

@@ -1,0 +1,192 @@
+
+%usepackage es egyebek
+\input{common/globdef.tex}
+
+%zarojel, FA...
+\input{common/matdef.tex}
+
+% rövidítések
+\input{common/szavakdef.tex}
+
+% tcolorbox-al kapcsolatos
+\input{common/tcboxdef.tex}
+
+\begin{document}\begin{spacing}{1.4}
+\pagecolor{BGSZ}
+
+\section*{Statisztika GI II félév} \label{DB}
+\nameref{DBpar}
+\newpage
+\section*{Paraméteres} \label{DBpar}
+\nameref{DBparegy}
+\vspace{0.5cm}
+\LINK{
+\hfill\nameref{DB}
+}
+\newpage
+\section*{Egymintás} \label{DBparegy}
+\nameref{DBparegymu}
+\newline
+\nameref{DBparegysigma}
+\vspace{0.5cm}
+\LINK{
+\hfill\nameref{DBpar}
+}
+\newpage
+\section*{Várható érték} \label{DBparegymu}
+\nameref{DBparegymuz}
+\newline
+\nameref{DBparegymuzf1}
+\newline
+\nameref{DBparegymuzf2}
+\newline
+\nameref{DBparegymut}
+\newline
+\nameref{DBparegymutf1}
+\newline
+\nameref{DBparegymutf2}
+\newline
+\nameref{DBparegymutf3}
+\vspace{0.5cm}
+\LINK{
+\hfill\nameref{DBparegy}
+}
+\newpage
+\section*{\mtit{Desc}Z-próba} \label{DBparegymuz}
+\Desc{
+\input{DB/par/egy/mu/zDesc}
+}
+\vspace{0.5cm}
+\LINK{
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Fa}Z1} \label{DBparegymuzf1}
+\Fa{
+\input{DB/par/egy/mu/zf1Fa}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymuzf1Mo}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Mo}Z1} \label{DBparegymuzf1Mo}
+\Mo{
+\input{DB/par/egy/mu/zf1Mo}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymuzf1}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Fa}Z2} \label{DBparegymuzf2}
+\Fa{
+\input{DB/par/egy/mu/zf2Fa}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymuzf2Mo}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Mo}Z2} \label{DBparegymuzf2Mo}
+\Mo{
+\input{DB/par/egy/mu/zf2Mo}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymuzf2}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Desc}t-próba} \label{DBparegymut}
+\Desc{
+\input{DB/par/egy/mu/tDesc}
+}
+\vspace{0.5cm}
+\LINK{
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Fa}t1} \label{DBparegymutf1}
+\Fa{
+\input{DB/par/egy/mu/tf1Fa}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymutf1Mo}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Mo}t1} \label{DBparegymutf1Mo}
+\Mo{
+\input{DB/par/egy/mu/tf1Mo}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymutf1}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Fa}t2} \label{DBparegymutf2}
+\Fa{
+\input{DB/par/egy/mu/tf2Fa}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymutf2Mo}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Mo}t2} \label{DBparegymutf2Mo}
+\Mo{
+\input{DB/par/egy/mu/tf2Mo}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymutf2}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Fa}t3} \label{DBparegymutf3}
+\Fa{
+\input{DB/par/egy/mu/tf3Fa}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymutf3Mo}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{\mtit{Mo}t3} \label{DBparegymutf3Mo}
+\Mo{
+\input{DB/par/egy/mu/tf3Mo}
+}
+\vspace{0.5cm}
+\LINK{
+\nameref{DBparegymutf3}
+\hfill\nameref{DBparegymu}
+}
+\newpage
+\section*{Szórásnégyzet-szórás} \label{DBparegysigma}
+\nameref{DBparegysigmachi2}
+\vspace{0.5cm}
+\LINK{
+\hfill\nameref{DBparegy}
+}
+\newpage
+\section*{\mtit{Desc}$\chi^2$-próba} \label{DBparegysigmachi2}
+\Desc{
+\input{DB/par/egy/sigma/chi2Desc}
+}
+\vspace{0.5cm}
+\LINK{
+\hfill\nameref{DBparegysigma}
+}
+\newpage
+
+\end{spacing}
+\end{document}
+

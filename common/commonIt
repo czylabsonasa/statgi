@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "refresing common files"
+cd common
+chmod --silent +w *
+rm -f *.*
+cp --preserve=all ../../common/* .
+cp --preserve=all makefile pushIt addIt commonIt cleanIt ..
+chmod 0 *
+chmod +r *
+cd ..
+echo "done!"

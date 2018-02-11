@@ -1,0 +1,20 @@
+stat2 # Statisztika GI II félév # T
+
+par # Paraméteres # T
+   egy # Egymintás # T
+      mu # Várható érték # T
+         z # Z-próba # D
+         zf1 # Z1 # F
+         zf2 # Z2 # F
+         t # t-próba # D
+         tf1 # t1 # F
+         tf2 # t2 # F
+         tf3 # t3 # F
+      #
+      sigma # Szórásnégyzet-szórás # T
+         chi2 # $\chi^2$-próba # D
+      #
+   #
+#
+
+#

@@ -1,0 +1,38 @@
+#!/bin/bash
+
+item=${1}
+tipus=${2}
+tar1=""
+tar2=""
+
+itemdir="${item%/*}"
+nev="${item##DB*/}"
+
+mkdir -p ${itemdir}
+
+case "${tipus}" in
+   "Fa" ) 
+      targ1=${nev}Fa
+      targ2=${nev}Mo
+      ;;
+   "Desc" ) 
+      targ1=${nev}Desc
+      targ2=${nev}Desc
+      ;;
+   * ) 
+      echo "hasznalat: ${0} item [Fa|Desc]"
+      exit 1;
+      ;;
+esac
+
+if [ -f ${itemdir}/${targ1}.tex ];
+then
+   echo ""${itemdir}/${targ1}$" exists."
+   exit 1
+fi
+echo "adding problem: "${itemdir}/${targ1}
+
+touch ${itemdir}/${targ1}.tex
+touch ${itemdir}/${targ2}.tex
+
+echo "done!"
