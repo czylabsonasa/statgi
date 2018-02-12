@@ -1,5 +1,4 @@
-import zegy
-import tegy
+import zegy, tegy, chi2sigma, propegy
 from gen import olvas
 
 inp=olvas()
@@ -13,3 +12,13 @@ while 1==1:
       tegy.init(inp)
       tegy.perform()
       break
+   if inp['tipus']=='chi2sigma':
+      chi2sigma.init(inp)
+      chi2sigma.perform()
+      break
+   if inp['tipus']=='propegy':
+      propegy.init(inp)
+      propegy.perform()
+      break
+
+

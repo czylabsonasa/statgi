@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.14)  11 FEB 2018 22:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.1.14)  12 FEB 2018 10:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1523,55 +1523,78 @@ ABD: EveryShipout initializing macros
 \GPT@outputbox=\box71
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (./DB/par/egy/
-mu/zDesc.tex) [5]
-(./DB/par/egy/mu/zf1Fa.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] (./DB/par/
+egy/mu/z/sumDesc.tex) [6]
+(./DB/par/egy/mu/z/f1Fa.tex
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [6]
-(./DB/par/egy/mu/zf1Mo.tex
+)) [7]
+(./DB/par/egy/mu/z/f1Mo.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--7
 
  []
 
-) [7] (./DB/par/egy/mu/zf2Fa.tex) [8] (./DB/par/egy/mu/zf2Mo.tex
+) [8] (./DB/par/egy/mu/z/f2Fa.tex) [9] (./DB/par/egy/mu/z/f2Mo.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--7
 
  []
 
-) [9] (./DB/par/egy/mu/tDesc.tex) [10] (./DB/par/egy/mu/tf1Fa.tex) [11]
-(./DB/par/egy/mu/tf1Mo.tex
+) [10] [11] (./DB/par/egy/mu/t/sumDesc.tex) [12] (./DB/par/egy/mu/t/f1Fa.tex)
+[13] (./DB/par/egy/mu/t/f1Mo.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--10
 
  []
 
-) [12] (./DB/par/egy/mu/tf2Fa.tex) [13] (./DB/par/egy/mu/tf2Mo.tex
+) [14] (./DB/par/egy/mu/t/f2Fa.tex) [15] (./DB/par/egy/mu/t/f2Mo.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--10
 
  []
 
-) [14] (./DB/par/egy/mu/tf3Fa.tex) [15] (./DB/par/egy/mu/tf3Mo.tex
+) [16] (./DB/par/egy/mu/t/f3Fa.tex) [17] (./DB/par/egy/mu/t/f3Mo.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--10
 
  []
 
-) [16] [17] (./DB/par/egy/sigma/chi2Desc.tex) [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
+) [18] [19] [20] (./DB/par/egy/sigma/chi2/sumDesc.tex) [21]
+(./DB/par/egy/sigma/chi2/f1Fa.tex) [22] (./DB/par/egy/sigma/chi2/f1Mo.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--9
+
+ []
+
+) [23] (./DB/par/egy/sigma/chi2/f2Fa.tex) [24]
+(./DB/par/egy/sigma/chi2/f2Mo.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--9
+
+ []
+
+) [25] [26] (./DB/par/egy/prop/sumDesc.tex) [27] (./DB/par/egy/prop/f1Fa.tex)
+[28] (./DB/par/egy/prop/f1Mo.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--8
+
+ []
+
+) [29] (./DB/par/egy/prop/f2Fa.tex) [30] (./DB/par/egy/prop/f2Mo.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--8
+
+ []
+
+) [31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 318.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 318.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 318.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 318.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 318.
  ) 
 Here is how much of TeX's memory you used:
- 36855 strings out of 494275
- 713005 string characters out of 6162937
- 783513 words of memory out of 5000000
- 39674 multiletter control sequences out of 15000+600000
+ 36938 strings out of 494275
+ 714510 string characters out of 6162937
+ 784053 words of memory out of 5000000
+ 39717 multiletter control sequences out of 15000+600000
  541017 words of font info for 54 fonts, out of 8000000 for 9000
  395 hyphenation exceptions out of 8191
  66i,15n,101p,10511b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1584,9 +1607,9 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (18 pages, 168263 bytes).
+Output written on main.pdf (31 pages, 205548 bytes).
 PDF statistics:
- 355 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
+ 464 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
  157 words of extra memory for PDF output out of 10000 (max. 10000000)
 

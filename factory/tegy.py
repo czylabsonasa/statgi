@@ -1,5 +1,5 @@
 import gen as g
-from gen import f2s, ujsor, mujsor, frac, zjel
+from gen import f2s, ujsor, mujsor, frac, br, cbr
 
 import numpy as np
 from scipy.stats import t
@@ -24,7 +24,7 @@ def init(inp):
    d['diffjel']=r'{mean}-{mu0}'.format(mean=f2s(d['meanval']), mu0=f2s(d['mu0']))
    d['sum2jel']=g.sum2jel(X[0], X[n-1], d['meanval'])
    d['sum2val']=np.sum((X-d['meanval'])**2)
-   d['sjel']=zjel(frac(d['sum2jel'], str(df)))+r'^\frac{1}{2}'
+   d['sjel']=br(frac(d['sum2jel'], str(df)))+r'^\frac{1}{2}'
    d['sval']=np.std(X,ddof=1)
    d['errval']=d['sval']/np.sqrt(n)
    d['errjel']=f2s(d['errval'])
@@ -43,7 +43,7 @@ def perform():
    out+=r'n={n}'.format(n=n)+mujsor
    out+=g.atlag(sumjel=d['sumjel'], sumval=f2s(d['sumval']), n=n, res=f2s(d['meanval']))+mujsor
    out+=r's = '+d['sjel']+' = '+mujsor
-   out+=r' = '+zjel(frac(f2s(d['sum2val']),str(n-1)))+r'^{\frac{1}{2}}'
+   out+=r' = '+br(frac(f2s(d['sum2val']),str(n-1)))+r'^{\frac{1}{2}}'
    out+=r' = {s}'.format(s=f2s(d['sval']))+mujsor
    out+=r'\frac{{s}}{{\sqrt{n}}}'+' = '+frac(f2s(d['sval']), f2s(np.sqrt(n)))+' = '+f2s(d['errval'])+mujsor
    out+=r't = '+d['tjel']+' = '+f2s(d['tval'])+mujsor

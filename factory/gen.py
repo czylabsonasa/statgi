@@ -34,6 +34,7 @@ def f2s(x,d=2):
 jellegT={'egyenlo':[ r' = ', r' \neq ' ], 'bal':[r' \ge ', r' < '], 'jobb':[r' \le ', ' > ']}
 
 muhipT=r'H_0 : \mu{j0}{mu0}\\ H_1 : \mu{j1}{mu0}'
+sigmahipT=r'H_0 : \sigma{j0}{sigma0}\\ H_1 : \sigma{j1}{sigma0}'
 
 def muhip(j, mu0):
    return( muhipT.format(j0=j[0], j1=j[1], mu0=mu0) )
@@ -56,5 +57,9 @@ mujsor=r'\\[2ex]'+'\n'
 def frac(a, b):
    return( r'\frac{{{a}}}{{{b}}}'.format(a=a, b=b))
 
-def zjel(a):
+def br(a):
    return( r'\left('+a+r'\right)')
+
+def cbr(a):
+   return( r'{'+a+r'}')
+

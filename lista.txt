@@ -1,20 +1,33 @@
-stat2 # Statisztika GI II félév # T
+stat2 # Statisztika GI II félév  # T
 
 par # Paraméteres # T
    egy # Egymintás # T
       mu # Várható érték # T
-         z # Z-próba # D
-         zf1 # Z1 # F
-         zf2 # Z2 # F
-         t # t-próba # D
-         tf1 # t1 # F
-         tf2 # t2 # F
-         tf3 # t3 # F
+         z # Z-próba # T
+            sum # képlet # D
+            f1 # palack # F
+            f2 # tea # F
+         #
+         t # t-próba # T
+            sum # képlet # D
+            f1 # búza # F
+            f2 # szintidő # F
+            f3 # kokszföld # F
+         #
       #
       sigma # Szórásnégyzet-szórás # T
-         chi2 # $\chi^2$-próba # D
+         chi2 # $\chi^2$-próba # T
+            sum # képlet # D
+            f1 # űrlapok # F
+            f2 # csővágó # F
+         #
       #
-   #
+      prop # Arány # T
+         sum # képlet # D
+         f1  # dalfesztivál # F
+         f2  # beszállító # F
+      #
+   #egy
 #
 
 #
