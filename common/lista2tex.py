@@ -2,16 +2,7 @@ import sys
 
 thepre=r"""
 %usepackage es egyebek
-\input{common/globdef.tex}
-
-%zarojel, FA...
-\input{common/matdef.tex}
-
-% rövidítések
-\input{common/szavakdef.tex}
-
-% tcolorbox-al kapcsolatos
-\input{common/tcboxdef.tex}
+\input{common/alldef.tex}
 
 \begin{document}\begin{spacing}{1.4}
 \pagecolor{BGSZ}
