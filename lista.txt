@@ -28,6 +28,24 @@ par # Paraméteres # T
          f2  # beszállító # F
       #
    #egy
-#
+
+   ket # Kétmintás # T
+      mu # Várható érték # T
+         z # Z-próba # T
+            sum # képlet # D
+            f1 # ic, hóesés # F
+         #
+         t # t-próba (független) # T
+            sum # képlet # D
+            f1 # kávé # F
+            f2 # golflabda # F
+         #
+         tp # páros mintás t-próba # T
+            sum # képlet # D
+            f1 # pulzus # F
+         #
+      #
+   #ket
+#par
 
 #
