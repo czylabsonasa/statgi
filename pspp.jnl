@@ -1,0 +1,10 @@
+GET FILE="/home/nosy/Asztal/fgyProjekt/StatGi/sav/vonat.sav".
+
+T-TEST /VARIABLES= vonat4_3
+	/GROUPS=vg(0,1)	/MISSING=ANALYSIS
+	/CRITERIA=CI(0.95).
+
+T-TEST /VARIABLES= vonat4_3
+	/GROUPS=vg(0,1)	/MISSING=ANALYSIS
+	/CRITERIA=CI(0.95).
+
